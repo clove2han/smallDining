@@ -9,10 +9,10 @@ var router = require('express').Router();
 var diningMember = require(PROXY).diningMember;
 var rechargeLog = require(PROXY).rechargeLog;
 var cancelMemberLog = require(BASEDIR + '/app/proxy/cancelMemberLog');
-var tool = require(BASEDIR + '/tools/tool');
+var tool = require(BASEDIR + '/app/common/utils/tool');
 var validator = require('validator');
 var _ = require('underscore');
-var syncData = require(BASEDIR+ '/tools/syncData');
+var syncData = require(BASEDIR+ '/app/common/utils/syncData');
 var async = require('async');
 var giveRule = require(BASEDIR + '/app/proxy/giveRule');
 

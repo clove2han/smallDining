@@ -11,8 +11,8 @@ var fs = require('fs');
 var validator = require('validator');
 var path = require("path");
 var _ = require('underscore');
-var tool = require(BASEDIR + '/tools/tool');
-var syncData = require(BASEDIR+ '/tools/syncData');
+var tool = require(BASEDIR + '/app/common/utils/tool');
+var syncData = require(BASEDIR+ '/app/common/utils/syncData');
 
 /**
  * 根据条件查询菜品(分页）

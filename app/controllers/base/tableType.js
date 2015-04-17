@@ -8,9 +8,9 @@
 var router = require('express').Router();
 var tableType = require(PROXY).tableType;
 var validator = require('validator');
-var tool = require(BASEDIR + '/tools/tool');
-var push = require(BASEDIR + '/tools/push');
-var syncData=require(BASEDIR+'/tools/syncData');
+var tool = require(BASEDIR + '/app/common/utils/tool');
+var push = require(BASEDIR + '/app/common/utils/push');
+var syncData=require(BASEDIR+'/app/common/utils/syncData');
 
 /**
  * 根据条件查询台位

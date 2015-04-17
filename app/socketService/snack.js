@@ -12,7 +12,7 @@ var transatcion = require(PROXY).transatcion;
 var rechargeLog = require(PROXY).rechargeLog;
 var pointsRule = require(PROXY).pointsRule;
 var diningMember = require(PROXY).diningMember;
-var tool = require(BASEDIR + '/tools/tool');
+var tool = require(BASEDIR + '/app/common/utils/tool');
 var async = require('async');
 
 module.exports = function (io, socket) {

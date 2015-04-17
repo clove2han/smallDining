@@ -7,7 +7,7 @@
  */
 var async = require('async');
 var validator = require('validator');
-var tool = require(BASEDIR + '/tools/tool');
+var tool = require(BASEDIR + '/app/common/utils/tool');
 var restOrders = require(PROXY).restOrders;
 var dishesOrder = require(PROXY).dishesOrder;
 var pointsRule = require(PROXY).pointsRule;
@@ -15,7 +15,7 @@ var consumerLog = require(PROXY).consumerLog;
 var diningMember = require(PROXY).diningMember;
 var dishes = require(PROXY).dishes;
 var staff = require(PROXY).staff;
-var tran = require(BASEDIR + '/tools/transDelegated');
+var tran = require(BASEDIR + '/app/common/utils/transDelegated');
 
 /**-------------------------------------------------------下单开始---------------------------------------------*/
 
@@ -102,7 +102,7 @@ function createOrder(data, pattern, callback) {
         'orderState': constant.ORDER_STATE.WAIT_PAY_BILL,
         'orderType': constant.ORDER_TYPE.DINING,
         'totalPrice': data.totalPrice,
-        'pattern': constant.PATTERN.GROG_SHOP_AND_SNACK,        //酒楼快餐模式
+        'pattern': pattern,                                     //酒楼快餐模式
         'isPack': data.isPack,                                  // 是否打包
         'waiter': data.cashierName,                             // 点菜操作员
         'foundingInfo.diningTableName': data.diningTableName

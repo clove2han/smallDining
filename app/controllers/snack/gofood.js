@@ -7,13 +7,13 @@
  */
 var router = require('express').Router();
 var validator = require('validator');
-var tool = require(BASEDIR + '/tools/tool');
+var tool = require(BASEDIR + '/app/common/utils/tool');
 var dishes = require(PROXY).dishes;
 var async = require('async');
 var dishesOrder = require(PROXY).dishesOrder;
 var saveSocket = require(CONTROLLERS + '/common/saveSocket');
 var goFoodCommon = require(CONTROLLERS + '/common/goFoodCommon');
-var tran = require(BASEDIR + '/tools/transDelegated');
+var tran = require(BASEDIR + '/app/common/utils/transDelegated');
 
 
 /**

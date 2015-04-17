@@ -7,7 +7,7 @@
  */
 
 var router = require('express').Router();
-var tool = require(BASEDIR + '/tools/tool');
+var tool = require(BASEDIR + '/app/common/utils/tool');
 var validator = require('validator');
 var _ = require('underscore');
 var fs = require('fs');

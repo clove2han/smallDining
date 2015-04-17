@@ -8,7 +8,7 @@
 var router = require('express').Router();
 var moment = require('moment');
 var utils = require('utility');
-var tool = require(BASEDIR + '/tools/tool');
+var tool = require(BASEDIR + '/app/common/utils/tool');
 
 //收银端 - 酒楼
 var QUEUES_PORT = "queues";

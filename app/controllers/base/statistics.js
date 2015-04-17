@@ -11,7 +11,7 @@ var rechargeLog = require(BASEDIR + '/app/proxy/rechargeLog');
 var consumerLog = require(BASEDIR + '/app/proxy/consumerLog');
 var cancelMemberLog = require(BASEDIR + '/app/proxy/cancelMemberLog');
 var async = require('async');
-var tool = require(BASEDIR + '/tools/tool');
+var tool = require(BASEDIR + '/app/common/utils/tool');
 
 /**
  * 按会员时间信息统计

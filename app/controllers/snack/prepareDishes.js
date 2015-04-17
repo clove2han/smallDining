@@ -7,7 +7,7 @@
  */
 var router = require('express').Router();
 var validator = require('validator');
-var tool = require(BASEDIR + '/tools/tool');
+var tool = require(BASEDIR + '/app/common/utils/tool');
 var dishes = require(PROXY).dishes;
 var saveSocket = require(CONTROLLERS + '/common/saveSocket');
 

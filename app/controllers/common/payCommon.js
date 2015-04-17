@@ -7,7 +7,7 @@
  */
 var async = require('async');
 var validator = require('validator');
-var tool = require(BASEDIR + '/tools/tool');
+var tool = require(BASEDIR + '/app/common/utils/tool');
 var restOrders = require(PROXY).restOrders;
 var dishesOrder = require(PROXY).dishesOrder;
 var pointsRule = require(PROXY).pointsRule;
@@ -15,7 +15,7 @@ var consumerLog = require(PROXY).consumerLog;
 var diningMember = require(PROXY).diningMember;
 var dishes = require(PROXY).dishes;
 var staff = require(PROXY).staff;
-var tran = require(BASEDIR + '/tools/transDelegated');
+var tran = require(BASEDIR + '/app/common/utils/transDelegated');
 
 
 /**

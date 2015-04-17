@@ -7,7 +7,7 @@
 var router = require('express').Router();
 var flavor = require(PROXY).flavor;
 var validator = require('validator');
-var syncData = require(BASEDIR+ '/tools/syncData');
+var syncData = require(BASEDIR+ '/app/common/utils/syncData');
 /**
  * 根据条件查询口味
  * @param id : 口味ID

@@ -8,7 +8,7 @@
 var table = require(PROXY).table;
 var restOrders = require(PROXY).restOrders;
 var validator = require('validator');
-var tool = require(BASEDIR + '/tools/tool');
+var tool = require(BASEDIR + '/app/common/utils/tool');
 
 module.exports = function (io, socket) {
     //返回socketId

@@ -7,9 +7,9 @@
  */
 var router = require('express').Router();
 var supplyTime = require(PROXY).supplyTime;
-var tool = require(BASEDIR + '/tools/tool');
+var tool = require(BASEDIR + '/app/common/utils/tool');
 var validator = require('validator');
-var syncData=require(BASEDIR+'/tools/syncData');
+var syncData=require(BASEDIR+'/app/common/utils/syncData');
 /*
 * 添加供应时间段
 * 接口数据

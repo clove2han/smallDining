@@ -9,7 +9,7 @@ var router = require('express').Router(),
     validator = require('validator'),
     role = require(PROXY).role,
     _ = require('underscore'),
-    syncData=require(BASEDIR+'/tools/syncData');
+    syncData=require(BASEDIR+'/app/common/utils/syncData');
 
 /*角色添加
  *post url: /role/add

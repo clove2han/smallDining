@@ -8,9 +8,9 @@ var router = require('express').Router();
 var table = require(PROXY).table;
 var validator = require('validator');
 var _ = require('underscore');
-var tool = require(BASEDIR + '/tools/tool');
-var push = require(BASEDIR + '/tools/push');
-var syncData=require(BASEDIR+'/tools/syncData');
+var tool = require(BASEDIR + '/app/common/utils/tool');
+var push = require(BASEDIR + '/app/common/utils/push');
+var syncData=require(BASEDIR+'/app/common/utils/syncData');
 /**
  * 根据条件查询台位  (当条件为空时，查询所有的台位)
  * @param name : 台位名称

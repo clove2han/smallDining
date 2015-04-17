@@ -17,7 +17,7 @@ var config = require(BASEDIR + '/app/config/config.json');
 var shop = require(BASEDIR + '/app/config/shop.json');
 
 var fs = require('fs');
-var tool = require(BASEDIR + '/tools/tool');
+var tool = require(BASEDIR + '/app/common/utils/tool');
 
 /**
  * 设置端登录接口

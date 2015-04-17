@@ -8,7 +8,7 @@
 var router = require('express').Router();
 var pointsRule = require(PROXY).pointsRule;
 var validator = require('validator');
-var syncData=require(BASEDIR+'/tools/syncData');
+var syncData=require(BASEDIR+'/app/common/utils/syncData');
 
 /**
  * 查询积分规则

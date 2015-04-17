@@ -1,0 +1,913 @@
+{
+  'success': true,
+  'results': [
+    {
+      'station': 1,
+      'played_date': 8,
+      'name': '/iccgw/register',
+      'txnContent': {
+        CompanyID: '0',
+        BusinessType: '0',            //0：出租车，1：租赁车
+        ChannelID: '0',					      //渠道商ID；0：51内部系统，1+：外部系统
+        LoginType: '1',
+        Source: "1",
+
+        Name: 'hongxin', //会员名称
+        EMail: 'hongxin.zhang@sristc.com', //会员邮箱
+        Password: '123456',  //会员密码
+        ServType: '1', 					//验证码发送方式，1：短信，2：e-mail
+        TelNo: '15994765065', //手机号码
+        Sex: '1', //性别
+        IVELicNo: '车辆牌号1'
+      }
+    },
+    {
+      'station': 2,
+      'played_date': 8,
+      'name': '/iccgw/login',
+      'txnContent': {
+        CompanyID: '0',
+        BusinessType: '0',            //0：出租车，1：租赁车
+        ChannelID: '0',					      //渠道商ID；0：51内部系统，1+：外部系统
+        UserID: '15994765065',	//内容对icc车队来说是EMail
+        LoginType: '1',
+
+        Password: 'user1',
+        Flag: '1'
+      }
+    },
+      {
+          'station': 111,
+          'played_date': 8,
+          'name': '/snack/pay',
+          'txnContent':{
+              cashier: '',
+              totalPrice:'',
+              payment:"[{paymentMethod:,paymentID:,price:}]",
+              dishes:"[{orderId:,dishTypeId:,dishesId:,waiter:,name:,price:,quantity:,state:,number:}]"
+          }
+      },
+      {
+          'station': 33,
+          'played_date': 8,
+          'name': '/iccgw/sharline_rank',
+          'txnContent': {
+              CompanyID: '0',
+              BusinessType: '0',            //0：出租车，1：租赁车
+              "ID":"15994765065", //车机ID
+              LineNo: '00002',
+              TimeItems: [
+                  {StationTime: '13:00'},
+                  {StationTime: '14:00'}
+              ]
+          }
+      },
+      {
+          'station': 311,
+          'played_date': 8,
+          'name': '/dishesType/query',
+          'txnContent': {
+              _id: "",
+              name: ""
+          }
+      },
+      {
+          'station': 312,
+          'played_date': 8,
+          'name': '/dishesType/add',
+          'txnContent': {
+              name: ""
+          }
+      },
+      {
+          'station': 313,
+          'played_date': 8,
+          'name': '/dishesType/delete',
+          'txnContent': {
+              ids: ""
+          }
+      },
+      {
+          'station': 314,
+          'played_date': 8,
+          'name': '/dishesType/update',
+          'txnContent': {
+              _id: "",
+              name: "",
+              sort: ""
+          }
+      },
+      {
+          'station': 321,
+          'played_date': 8,
+          'name': '/dishes/query',
+          'txnContent': {
+              _id: "",
+              name: "",
+              typeId: "",
+              activityType: "",
+              supplyTimeId: ""
+          }
+      },
+      {
+          'station': 322,
+          'played_date': 8,
+          'name': '/dishes/page',
+          'txnContent': {
+              _id: "",
+              name: "",
+              typeId: "",
+              activityType: "",
+              page: "1",
+              pageSize: "10"
+          }
+      },
+      {
+          'station': 323,
+          'played_date': 8,
+          'name': '/dishes/add',
+          'txnContent': {
+            name: '',
+            abbr: '',
+            typeId: '',
+            activityType: '',
+            imgName: '',
+            flavorId: '',
+            price: "",
+            intro: '',
+            saleType: '',
+            salePrice: '',
+            state: '',
+            salesVolume: '',
+            surplus: '',
+            remark: ''
+          }
+      },
+      {
+          'station': 324,
+          'played_date': 8,
+          'name': '/dishes/delete',
+          'txnContent': {
+              ids: ""
+          }
+      },
+      {
+          'station': 325,
+          'played_date': 8,
+          'name': '/dishes/update',
+          'txnContent': {
+              _id: '',
+              name: '',
+              abbr: '',
+              typeId: '',
+              activityType: "",
+              imgName: '',
+              flavorId: "",
+              price: "",
+              intro: '',
+              salePrice: '',
+              saleType: '',
+              state: '',
+              salesVolume: '',
+              surplus: '',
+              remark: '',
+              sort: ''
+          }
+      },
+      {
+          'station': 326,
+          'played_date': 8,
+          'name': '/dishes/add',
+          'txnContent': {
+              name: '',
+              abbr: '',
+              typeId: '',
+              activityType: '',
+              imgName: '',
+              flavorId: '',
+              price: "",
+              intro: '',
+              saleType: '',
+              salePrice: '',
+              state: '',
+              salesVolume: '',
+              surplus: '',
+              packageContent: "[{\"name\":\"主菜\",\"optional\":1,\"sort\":1,\"list\":[\"54c889e1dd8872e425bfd14e\",\"54c889f8dd8872e425bfd14f\"]},{\"name\":\"甜品\",\"optional\":0,\"sort\":2,\"list\":[\"54c88a37dd8872e425bfd158\"]}]",
+              remark: ''
+          }
+      },
+      {
+          'station': 327,
+          'played_date': 8,
+          'name': '/dishes/updateSurplus',
+          'txnContent': {
+              _id: '',
+              increment: ''
+          }
+      },
+
+      {
+          'station': 331,
+          'played_date': 8,
+          'name': '/dishesAppraise/query',
+          'txnContent': {
+              dishesInfo: ""
+          }
+      },
+      {
+          'station': 332,
+          'played_date': 8,
+          'name': '/dishesAppraise/page',
+          'txnContent': {
+              dishesInfo: "",
+              page: "1",
+              pageSize: "10"
+          }
+      },
+      {
+          'station': 333,
+          'played_date': 8,
+          'name': '/dishesAppraise/add',
+          'txnContent': {
+              userInfoId: "",
+              dishesInfo: "",
+              content: "",
+              score: "",
+              remark: ""
+          }
+      },
+      {
+          'station': 334,
+          'played_date': 8,
+          'name': '/dishesAppraise/delete',
+          'txnContent': {
+              _ids: ""
+          }
+      },
+      {
+          'station': 341,
+          'played_date': 8,
+          'name': '/flavor/query',
+          'txnContent': {
+              _id: "",
+              name: ""
+          }
+      },
+      {
+          'station': 342,
+          'played_date': 8,
+          'name': '/flavor/add',
+          'txnContent': {
+              name: "",
+              remark: ""
+          }
+      },
+      {
+          'station': 343,
+          'played_date': 8,
+          'name': '/flavor/delete',
+          'txnContent': {
+              ids: ""
+          }
+      },
+      {
+          'station': 344,
+          'played_date': 8,
+          'name': '/flavor/update',
+          'txnContent': {
+              _id: "",
+              name: "",
+              remark: ""
+          }
+      },
+      {
+          'station': 351,
+          'played_date': 8,
+          'name': '/dishesOrder/query',
+          'txnContent': {
+              _id: ""
+              , orderId: ""
+              , dishTypeId: ""
+              , state: ""
+              , states: ""
+          }
+      },
+      {
+          'station': 352,
+          'played_date': 8,
+          'name': '/dishesOrder/add',
+          'txnContent': [{
+              orderId: ''
+              , dishesId: ''
+              , name: ''
+              , quantity: ''
+              , price: ''
+              , dishTypeId: ''
+              , flavor: ''
+              , remark: ''
+          }]
+      },
+      {
+          'station': 353,
+          'played_date': 8,
+          'name': '/dishesOrder/delete',
+          'txnContent': {
+              ids: ""
+          }
+      },
+      {
+          'station': 354,
+          'played_date': 8,
+          'name': '/dishesOrder/update',
+          'txnContent': {
+              _id: "",
+              dishTypeId: "",
+              orderId: "",
+              quantity: "",
+              price: "",
+              state: "",
+              number: "",
+              flavor: '',
+              remark: ''
+          }
+      },
+      {
+          'station': 355,
+          'played_date': 8,
+          'name': '/dishesOrder/updateForNumber',
+          'txnContent': {
+              _id: "",
+              increment: ""
+          }
+      },
+      {
+          'station': 356,
+          'played_date': 8,
+          'name': 'pushFood',
+          'txnContent': {
+              _id: "",
+              state: ""
+          }
+      },
+      {
+          'station': 357,
+          'played_date': 8,
+          'name': 'addDishesOrder',
+          'txnContent': [{
+              orderId: ''
+              , dishesId: ''
+              , name: ''
+              , quantity: ''
+              , price: ''
+              , dishTypeId: ''
+              , flavor: ''
+              , remark: ''
+          }]
+      },
+      {
+          'station': 361,
+          'played_date': 8,
+          'name': '/restOrders/query',
+          'txnContent': {
+              _id: "",
+              orderNumber: "",
+              orderState: "",
+              orderType: "",
+              foundingInfo: {
+                  diningTableId: '',
+                  diningTableName: '',
+              },
+              cashierId: "",
+              ongoing: true
+          }
+      },
+      {
+          'station': 362,
+          'played_date': 8,
+          'name': '/restOrders/add',
+          'txnContent': {
+            orderType: '',
+            foundingInfo: {
+                waiter: '',
+                diningTableId: '',
+                diningTableName: '',
+                mealsNumber: ''
+            }
+          }
+      },
+      {
+          'station': 363,
+          'played_date': 8,
+          'name': '/restOrders/update',
+          'txnContent': {
+              _id: "",
+              state: ""
+          }
+      },
+      {
+          'station': 365,
+          'played_date': 8,
+          'name': '/restOrders/payBill',
+          'txnContent': {
+            _id : "",
+            diningMemberId: '',
+            foundingInfo: {
+                cashier: ""
+            },
+            payment: [{
+                paymentMethod: "",
+                price: ""
+            }],
+          }
+      },
+      {
+          'station': 371,
+          'played_date': 8,
+          'name': '/statistics/memberAnalyze',
+          'txnContent': {
+              diningMemberId: "",
+            startTime: "",
+            endTime: ""
+          }
+      },
+      {
+          'station': 372,
+          'played_date': 8,
+          'name': '/statistics/restAnalyze',
+          'txnContent': {
+              startTime: "",
+              endTime: ""
+          }
+      },
+      {
+          'station': 4,
+          'ayed_date': 8,
+          'name': '/clerk',
+          'txnContent': {
+              CompanyID: '0',
+              BusinessType: '0',            //0：出租车，1：租赁车
+              ChannelID: '0',					      //渠道商ID；0：51内部系统，1+：外部系统
+              UserID: '15994765065',	//内容对icc车队来说是EMail
+              LoginType: '1',
+              Password: 'user1',
+              Flag: '1'
+          }
+      },
+      {
+          'station': 200,
+          'played_date': 8,
+          'name': '/permission/add',
+          'txnContent': {
+              func: '',
+              description: '',
+              path: ''
+          }
+      },
+      {
+          'station': 201,
+          'played_date': 8,
+          'name': '/permission/update',
+          'txnContent': {
+              _id: '',
+              func: "",
+              description: '',
+              path: ''
+          }
+      },
+      {
+          'station': 202,
+          'played_date': 8,
+          'name': '/permission/delete',
+          'txnContent': {
+              _id: ''
+          }
+      },{
+          'station': 203,
+          'played_date': 8,
+          'name': '/permission/query',
+          'txnContent': {
+              _id: '',
+              func: ''
+          }
+      },{
+          'station': 210,
+          'played_date': 8,
+          'name': '/role/add',
+          'txnContent': {
+              name: '',
+              permissionList: '[]'
+          }
+      },{
+          'station': 211,
+          'played_date': 8,
+          'name': '/role/update',
+          'txnContent': {
+              _id: '',
+              name: '',
+              permissionList: '[]'
+          }
+      },{
+          'station': 212,
+          'played_date': 8,
+          'name': '/role/delete',
+          'txnContent': {
+              _id: ''
+          }
+      },{
+          'station': 213,
+          'played_date': 8,
+          'name': '/role/query',
+          'txnContent': {
+              _id: '',
+              name: '',
+              permissionList:'[]'
+          }
+      },{
+          'station': 220,
+          'played_date': 8,
+          'name': '/staff/add',
+          'txnContent': {
+              account: '',
+              userName: '',
+              password: '',
+              role: '',
+          }
+      },{
+          'station': 221,
+          'played_date': 8,
+          'name': '/staff/update',
+          'txnContent': {
+              _id: '',
+              account: '',
+              userName: '',
+              password: '',
+              role: '',
+              state: ''
+          }
+      },{
+          'station': 222,
+          'played_date': 8,
+          'name': '/staff/delete',
+          'txnContent': {
+              _id: ''
+          }
+      },{
+          'station': 223,
+          'played_date': 8,
+          'name': '/staff/query',
+          'txnContent': {
+              _id: '',
+              password: '',
+              account: '',
+              userName:'',
+              state:'',
+              role:''
+          }
+      },
+
+      //查看台位
+      {
+          'station': 101,
+          'played_date': 8,
+          'name': '/table/query',
+          'txnContent': {
+              _id: '',
+              name:'',
+              tableTypeId:'',
+              sort:'',
+              state:''
+          }
+      },
+
+      //添加台位
+      {
+          'station': 102,
+          'played_date': 8,
+          'name': '/table/add',
+          'txnContent': {
+              name:'',
+              sort:'',
+              state:'',
+              tableTypeId:''   //台位类型
+          }
+      },
+        //修改台位
+      {
+          'station': 103,
+          'played_date': 8,
+          'name': '/table/update',
+          'txnContent': {
+              _id:'',
+              name:'',
+              sort:'',
+              state:'',
+              tableTypeId:''   //台位类型
+          }
+      },
+      //删除台位
+      {
+          'station': 104,
+          'played_date': 8,
+          'name': '/table/delete',
+          'txnContent': {
+              '_id':''
+          }
+      },
+
+
+
+      //查看台位类型台位
+      {
+          'station': 111,
+          'played_date': 8,
+          'name': '/tableType/query',
+          'txnContent': {
+              _id: '',
+              name:'',
+              sort:'',
+              number:'',
+              state:''
+          }
+      },
+      //添加台位类型
+      {
+          'station': 112,
+          'played_date': 8,
+          'name': '/tableType/add',
+          'txnContent': {
+              name:'',
+              sort:'',
+              number:'',
+              state:''
+          }
+      },
+        //修改台位类型
+      {
+          'station': 113,
+          'played_date': 8,
+          'name': '/tableType/update',
+          'txnContent': {
+              _id:'',
+              name:'',
+              sort:'',
+              number:'',
+              state:''
+          }
+      },
+
+      //删除台位类型
+      {
+          'station': 114,
+          'played_date': 8,
+          'name': '/tableType/delete',
+          'txnContent': {
+              name:''
+          }
+      },
+
+      //查看排位号
+      {
+          'station': 121,
+          'played_date': 8,
+          'name': '/queue/query',
+          'txnContent': {
+              'queueNumber':''
+          }
+      },
+      //添加排位号
+      {
+          'station': 122,
+          'played_date': 8,
+          'name': '/queue/add',
+          'txnContent': {
+              'mealsNumber':'',
+          }
+      },
+      //删除排位号
+      {
+          'station': 123,
+          'played_date': 8,
+          'name': '/queue/delete',
+          'txnContent': {
+              'queueNumber':''
+          }
+      },
+
+      //查看会员
+      {
+          'station': 131,
+          'played_date': 8,
+          'name': '/diningMember/query',
+          'txnContent': {
+              '_id':'',
+              'membNo' : '',                                  // 账号名
+              'tel' : ''                                      // 手机号码
+          }
+      },
+      //添加会员
+      {
+          'station': 132,
+          'played_date': 8,
+          'name': '/diningMember/add',
+          'txnContent': {
+              'membNo'       : '',                  // 会员卡号      数据唯一
+              'smallNo'      : '',
+              'state'        : '',                  // 状态          正常：0 挂失：1 注销：2
+              'membLevelId'    : '',                  // 会员等级      关联等级表
+              'name'         : '',                  // 姓名          不超过10个字符
+              'tel'          : '',                  // 手机号码
+              'prepayments'  : '',                  // 预付款金额     验证数据类型为number
+              'points'       : '',                  // 积分           验证数据类型为number
+              'remark'       : ''                   // 备注
+          }
+      },
+      //删除会员
+      {
+          'station': 133,
+          'played_date': 8,
+          'name': '/diningMember/delete',
+          'txnContent': {
+              'membNo' : ''                                  // 会员卡号
+          }
+      },
+
+      //修改会员
+      {
+          'station': 134,
+          'played_date': 8,
+          'name': '/diningMember/update',
+          'txnContent': {
+              '_id':'',
+              'membNo'       : '',                  // 会员卡号      数据唯一
+              'state'        : '',                  // 状态          正常：0 挂失：1 注销：2
+              'membLevel'    : '',                  // 会员等级     关联等级表
+              'name'         : '',                  // 姓名          不超过10个字符
+              'tel'          : '',                  // 手机号码
+              'prepayments'  : '',                  // 预付款金额     验证数据类型为number
+              'points'       : '',                  // 积分          验证数据类型为number
+              'remark'       : ''                   // 备注
+          }
+      },
+
+      //查看会员等级
+      {
+          'station': 141,
+          'played_date': 8,
+          'name': '/memberLevel/query',
+          'txnContent': {
+              '_id': '',
+              'name' : ''                                  // 等级名称
+          }
+      },
+
+      //添加会员等级
+      {
+          'station': 142,
+          'played_date': 8,
+          'name': '/memberLevel/add',
+          'txnContent': {
+              'name' : '' ,                                 // 等级名称
+              'minAmount' : '',                             // 等级最小金额
+              'maxAmount' : '',                             // 等级最大金额
+              'discounts' : ''                              // 享受折扣
+          }
+      },
+
+      //删除会员等级
+      {
+          'station': 143,
+          'played_date': 8,
+          'name': '/memberLevel/delete',
+          'txnContent': {
+              '_id' : ''                                  // 等级名称
+          }
+      },
+
+      //修改会员等级
+      {
+          'station': 144,
+          'played_date': 8,
+          'name': '/memberLevel/update',
+          'txnContent': {
+              '_id':'',                                      // id
+              'name' : '' ,                                 // 等级名称
+              'minAmount' : '',                             // 等级最小金额
+              'maxAmount' : '',                             // 等级最大金额
+              'discounts' : ''                              // 享受折扣
+          }
+      },
+
+      //查看积分规则
+      {
+          'station': 151,
+          'played_date': 8,
+          'name': '/pointsRule/query',
+          'txnContent': {
+              '_id':'',                                      // id
+          }
+      },
+
+      //添加积分规则
+      {
+          'station': 152,
+          'played_date': 8,
+          'name': '/pointsRule/add',
+          'txnContent': {
+              'consumer':'',                      // 消费金额
+              'returnPoints':''                   // 返还积分
+          }
+      },
+
+      //修改积分规则
+      {
+          'station': 153,
+          'played_date': 8,
+          'name': '/pointsRule/update',
+          'txnContent': {
+              '_id':'',
+              'consumer':'',                      // 消费金额
+              'returnPoints':''                   // 返还积分
+          }
+      },
+      //添加供应时间段
+      {
+          'station': 11,
+          'played_date': 8,
+          'name': '/supplyTime/add',
+          'txnContent': {
+              'name':'',
+              'img':''
+          }
+      },//查询供应时间段
+      {
+          'station': 12,
+          'played_date': 8,
+          'name': '/supplyTime/query',
+          'txnContent': {
+              '_id':'',
+              'name':'',
+              'img':''
+          }
+      },//删除供应时间段
+      {
+          'station': 13,
+          'played_date': 8,
+          'name': '/supplyTime/remove',
+          'txnContent': {
+              '_id':''
+
+          }
+      },//修改供应时间段
+      {
+          'station': 14,
+          'played_date': 8,
+          'name': '/supplyTime/update',
+          'txnContent': {
+              '_id':'',
+              'name':'',
+              'img':''
+          }
+      },{
+          'station': 161,
+          'played_date': 8,
+          'name': '/staffCard/add',
+          'txnContent': {
+              'name':'',
+              'cardNum':'',
+              'hasRecede': 'true',
+              'discount':''
+          }
+      },{
+          'station': 162,
+          'played_date': 8,
+          'name': '/staffCard/query',
+          'txnContent': {
+              '_id':'',
+              'name':'',
+              'cardNum':'',
+              'hasRecede': 'true',
+              'discount':''
+          }
+      },{
+          'station': 163,
+          'played_date': 8,
+          'name': '/staffCard/update',
+          'txnContent': {
+              '_id':'',
+              'name':'',
+              'cardNum':'',
+              'hasRecede': 'true',
+              'discount':''
+          }
+      },
+
+    {
+      'name': 'Kissed it',
+      'artist': 'Macy Gray',
+      'album': 'The Sellout',
+      'description': 'Description for Macy',
+      'played_date': 14,
+      'station': 999
+    }
+  ]
+}

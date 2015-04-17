@@ -7,8 +7,8 @@
 var router = require('express').Router();
 var dishesType = require(PROXY).dishesType;
 var validator = require('validator');
-var tool = require(BASEDIR + '/tools/tool');
-var syncData = require(BASEDIR+ '/tools/syncData');
+var tool = require(BASEDIR + '/app/common/utils/tool');
+var syncData = require(BASEDIR+ '/app/common/utils/syncData');
 var dishes = require(PROXY).dishes;
 
 /**

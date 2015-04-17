@@ -7,8 +7,8 @@
 var router = require('express').Router();
 var memberLevel = require(PROXY).memberLevel;
 var validator = require('validator');
-var tool = require(BASEDIR + '/tools/tool');
-var syncData=require(BASEDIR+'/tools/syncData');
+var tool = require(BASEDIR + '/app/common/utils/tool');
+var syncData=require(BASEDIR+'/app/common/utils/syncData');
 /**
  * 查询会员等级  (当条件为空时，查询所有数据)
  * @param 会员id

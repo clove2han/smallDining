@@ -7,7 +7,7 @@
  */
 var router = require('express').Router();
 var validator = require('validator');
-var tool = require(BASEDIR + '/tools/tool');
+var tool = require(BASEDIR + '/app/common/utils/tool');
 var payCommon = require(CONTROLLERS + '/common/payCommon');
 var orderCommon = require(CONTROLLERS + '/common/orderCommon');
 var cashierCommon = require(CONTROLLERS + '/common/cashierCommon');
@@ -271,7 +271,7 @@ router.post('/sendOrderInfo', function (req, res) {
                 var dishesData = {};
                 list.forEach(function (item) {
                     if(item.state != constant.DISHES_STATE.HAVE_DONE){
-                        kitchenList.push(dishesData);
+                        kitchenList.push(item);
                     }
                 });
                 for (var i in SOCKETS.goFood) {

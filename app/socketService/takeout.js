@@ -6,7 +6,7 @@
  * @modified By
  */
 var config = require(BASEDIR + '/app/config/config.json')
-    ,tool = require(BASEDIR + '/tools/tool')
+    ,tool = require(BASEDIR + '/app/common/utils/tool')
     ,socket_client = require('socket.io-client')(tool.getSmallWalletPath())
     ,restOrders = require(PROXY).restOrders
     ,dishesOrder = require(PROXY).dishesOrder

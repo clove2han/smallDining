@@ -13,7 +13,7 @@ var moment = require('moment');
 var validator = require('validator');
 var restOrders = require(PROXY).restOrders;
 var dishesOrder = require(PROXY).dishesOrder;
-var tool = require(BASEDIR + '/tools/tool');
+var tool = require(BASEDIR + '/app/common/utils/tool');
 var async = require('async');
 var rechargeLog = require(PROXY).rechargeLog;
 var consumerLog = require(BASEDIR + '/app/proxy/consumerLog');
@@ -418,9 +418,9 @@ router.post('/reportQuery',function(req,res){
                 ,posBackLength:tool.toDecimal1Two(sumObj.posBackLength)      //银联卡退款次数
                 ,beautifyBackPrice:tool.toDecimal1Two(sumObj.beautifyBack)         //美餐退款总金额
                 ,couponPay: tool.toDecimal1Two(sumObj.couponPay)             //优惠券使用金额
-                ,salexpense :tool.toDecimal1Two(sumObj.sumRechGiveMon+useGiveMon-cancelGiveMoney)       //销售费用  (优惠总金额)
+                ,salexpense :tool.toDecimal1Two(useGiveMon)       //销售费用  (优惠总金额)
                 ,memberAllSurplus: tool.toDecimal1Two(prepayments+nowGiveMon) //会员总余额
-                ,yushouMoney:tool.toDecimal1Two(sumObj.posRecharge+sumObj.cashRecharge+sumObj.sumRechGiveMon-sumObj.memberPay+sumObj.memberBack-cancelMemberPrice)
+                ,yushouMoney:tool.toDecimal1Two(sumObj.posRecharge+sumObj.cashRecharge-sumObj.memberPay+sumObj.memberBack-cancelMemberPrice)
                 ,realPrice: tool.toDecimal1Two(sumObj.cashPay-sumObj.cashBack) //现金收款总金额
                 ,realMemberPrice:tool.toDecimal1Two(sumObj.memberPay-sumObj.memberBack)  //会员收款总金额
             };

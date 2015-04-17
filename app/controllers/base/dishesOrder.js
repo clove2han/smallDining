@@ -9,8 +9,8 @@ var dishesOrder = require(PROXY).dishesOrder;
 var restOrders = require(PROXY).restOrders;
 var validator = require('validator');
 var moment = require('moment');
-var syncData=require(BASEDIR+'/tools/syncData');
-var tool = require(BASEDIR + '/tools/tool');
+var syncData=require(BASEDIR+'/app/common/utils/syncData');
+var tool = require(BASEDIR + '/app/common/utils/tool');
 
 /**
  * 根据条件查询菜品订单

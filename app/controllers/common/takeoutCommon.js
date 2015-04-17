@@ -5,8 +5,8 @@
  * @author 黄耀奎
  * @modified By
  */
-var push = require(BASEDIR + '/tools/push');
-var tool = require(BASEDIR + '/tools/tool');
+var push = require(BASEDIR + '/app/common/utils/push');
+var tool = require(BASEDIR + '/app/common/utils/tool');
 var restOrders = require(PROXY).restOrders;
 var dishesOrder = require(PROXY).dishesOrder;
 var staff = require(PROXY).staff;

@@ -8,12 +8,12 @@
 var router = require('express').Router();
 var validator = require('validator');
 var dishes = require(PROXY).dishes;
-var tool = require(BASEDIR + '/tools/tool');
+var tool = require(BASEDIR + '/app/common/utils/tool');
 var restOrders = require(PROXY).restOrders;
 var dishesOrder = require(PROXY).dishesOrder;
 var table = require(PROXY).table;
 var async = require('async');
-var tran = require(BASEDIR + '/tools/transDelegated');
+var tran = require(BASEDIR + '/app/common/utils/transDelegated');
 var saveSocket = require(CONTROLLERS + '/common/saveSocket');
 var staff=require(PROXY).staff;
 var flavor=require(PROXY).flavor;
@@ -47,17 +47,20 @@ router.post('/openTable', function  (req, res) {
     }
 
     var condition = {}, update = {};
+    console.log("===================开台服务员============================");
+    console.log(params);
     staff.getStaffByQuery({_id: params.waiterId, isDel:false}, function (err, staffData) {
         if (err) {
             return returnFAIL(res, err.message);
 
         } else if (staffData && staffData.length > 0){
+            console.log(staffData[0].userName);
             var newRestOrder = {
                 orderNumber: tool.createOrderNumber(),  //订单号
                 orderType: 1,                           //餐厅就餐类型
                 pattern: 1,                             //酒楼模式
                 ongoing: true,
-                waiterName: staffData[0].userName,      //服务员名称
+                waiter: staffData[0].userName,      //服务员名称
                 foundingInfo:{                          //对应台位信息
                     foundingTime: new Date(),
                     diningTableId: params.tableId,

@@ -17,13 +17,12 @@ var pointsRule = require(PROXY).pointsRule;
 var consumerLog = require(PROXY).consumerLog;
 var diningMember = require(PROXY).diningMember;
 var table = require(PROXY).table;
-var tool = require(BASEDIR + '/tools/tool');
+var tool = require(BASEDIR + '/app/common/utils/tool');
 var async = require('async');
 var validator = require('validator');
 var _ = require('underscore');
 var saveSocket = require(CONTROLLERS + '/common/saveSocket');
-var tran = require(BASEDIR + '/tools/transDelegated');
-
+var tran = require(BASEDIR + '/app/common/utils/transDelegated');
 
 /**
  * 保存收银端的socketId
@@ -107,6 +106,7 @@ router.post('/payBill', function (req, res) {
 function checkData(data, callback) {
     var params = tool.deleteNull(validator, data);
     var returnData = {totalPrice: 0, memberPay: 0}, payTotalPrice = 0;
+    console.log(params);
 
     if (params._id && params.cashierId && params.payment && params.totalPrice) {
 

@@ -9,8 +9,8 @@ var router = require('express').Router();
 var validator = require('validator');
 var utils = require('utility');
 var staff = require(PROXY).staff;
-var tool = require(BASEDIR + '/tools/tool');
-var syncData = require(BASEDIR+ '/tools/syncData');
+var tool = require(BASEDIR + '/app/common/utils/tool');
+var syncData = require(BASEDIR+ '/app/common/utils/syncData');
 var async = require('async');
 var alternateLog = require(BASEDIR + '/app/proxy/alternateLog');
 

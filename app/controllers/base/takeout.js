@@ -9,7 +9,7 @@ var router = require('express').Router();
 var config = require(BASEDIR + '/app/config/config.json');
 var validator = require('validator');
 var request = require('request');
-var tool = require(BASEDIR + '/tools/tool');
+var tool = require(BASEDIR + '/app/common/utils/tool');
 var restOrders = require(PROXY).restOrders;
 var payCommon = require(CONTROLLERS + '/common/payCommon');
 

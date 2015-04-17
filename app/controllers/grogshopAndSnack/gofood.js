@@ -11,7 +11,7 @@ var goFoodCommon = require(CONTROLLERS + '/common/goFoodCommon');
 var dishesOrder = require(PROXY).dishesOrder;
 var restOrders = require(PROXY).restOrders;
 var validator = require('validator');
-var tool = require(BASEDIR + '/tools/tool');
+var tool = require(BASEDIR + '/app/common/utils/tool');
 
 /**
  * 保存上菜端的socketId

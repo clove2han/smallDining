@@ -9,9 +9,9 @@ var restOrders = require(PROXY).restOrders;
 var dishesOrder = require(PROXY).dishesOrder;
 var pointsRule = require(PROXY).pointsRule;
 var rechargeLog = require(PROXY).rechargeLog;
-var tool = require(BASEDIR + '/tools/tool');
+var tool = require(BASEDIR + '/app/common/utils/tool');
 var async = require('async');
-var tran = require(BASEDIR + '/tools/transDelegated');
+var tran = require(BASEDIR + '/app/common/utils/transDelegated');
 var consumerLog = require(BASEDIR + '/app/proxy/consumerLog');
 
 

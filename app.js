@@ -14,8 +14,8 @@ var express = require('express'),
     config = require(BASEDIR + '/app/config/config.json'),
     compression = require('compression'),
     app = express(),
-    syncData = require(BASEDIR+ '/tools/syncData');
-    rollback = require(BASEDIR+ '/tools/rollback');
+    syncData = require(BASEDIR+ '/app/common/utils/syncData');
+    rollback = require(BASEDIR+ '/app/common/utils/rollback');
 
     //添加日志记录
     var log = require('./log');

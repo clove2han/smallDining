@@ -10,7 +10,7 @@ var validator = require('validator');
 var moment = require('moment');
 var dishesOrder = require(PROXY).dishesOrder;
 var saveSocket = require(CONTROLLERS + '/common/saveSocket');
-var tool = require(BASEDIR + '/tools/tool');
+var tool = require(BASEDIR + '/app/common/utils/tool');
 
 /**
  * 保存厨师端的socketId

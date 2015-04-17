@@ -7,7 +7,7 @@
  */
 var router = require('express').Router();
 var validator = require('validator');
-var tool = require(BASEDIR + '/tools/tool');
+var tool = require(BASEDIR + '/app/common/utils/tool');
 var payCommon = require(CONTROLLERS + '/common/payCommon');
 var orderCommon = require(CONTROLLERS + '/common/orderCommon');
 var cashierCommon = require(CONTROLLERS + '/common/cashierCommon');
