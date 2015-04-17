@@ -1,0 +1,30 @@
+var debug = require('debug')('smallDining');
+var app = require('../app');
+
+app.set('port', process.env.PORT || 8000);
+
+var server = app.listen(app.get('port'));
+
+var io = require('socket.io').listen(server);
+    global.SOCKETIO = io;
+
+    global.SOCKETS = {
+        cashier: [],
+        show: [],
+        kitchen: [],
+        waiter: [],
+        queues: [],
+        goFood: [],
+        prepare: []
+    };
+
+    global.BINDTABLE = [];
+
+    io.sockets.on('connection', function (socket) {
+        require(BASEDIR + '/app/socketService/snack')(io, socket);
+        require(BASEDIR + '/app/socketService/base')(io, socket);
+        require(BASEDIR + '/app/socketService/show')(io, socket);
+
+    });
+
+require(BASEDIR + '/app/socketService/takeout')(io);

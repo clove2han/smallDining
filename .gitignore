@@ -4,7 +4,11 @@ ehthumbs.db
 
 # Folder config file
 Desktop.ini
-
+node_modules
+public
+temp
+logs
+.idea
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 

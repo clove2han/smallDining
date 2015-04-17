@@ -1,0 +1,28 @@
+﻿测试版本号：
+    v0.4
+
+主要实现功能：
+    与小猫钱包外卖对接
+    酒楼式快餐的套餐实现
+
+更新后需要修改的数据：
+    db.dishes.update({}, {$set: {isPackage: false}}, {multi: true});
+    db.dishesOrders.update({}, {$set:{isPackage: false, isDisplay: true}}, {multi: true});
+
+已知BUG:
+    服务器越来越慢
+
+修复BUG:
+    当客户端socket断开链接后socket.io没有把断开链接的socketId对象的内存释放，导致服务器越来越慢
+
+变动日志:
+    为了实现套餐功能，
+    给dishes加了两个字段: isPackage, packageContent
+    给dishesOrder加了两个字段: isPackage, packageContent
+
+
+版本日期:
+    2015/02/
+
+版本开发人员:
+    黄耀奎

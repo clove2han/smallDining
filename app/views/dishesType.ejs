@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h3>菜品类型测试页</h3>
+    <br>
+    检索：
+        <form method="post" action="/dishestype/list">
+            ID:<input type="text" name="id" />
+            NAME:<input type="text" name="name" />
+            <input type="submit" value="搜索" />
+        </form>
+    <br>
+    新增：
+        <form method="post" action="/dishestype/add">
+            NAME:<input type="text" name="name" />
+            <input type="submit" value="提交" />
+        </form>
+    <br>
+    修改：
+    <form method="post" action="/dishestype/update">
+        ID:<input type="text" name="id" value="" />
+        NAME:<input type="text" name="name" />
+        ORDER:<input type="text" name="order" />
+        <input type="submit" value="提交" />
+    </form>
+    <br>
+    删除:
+        <form method="post" action="/dishestype/delete">
+            ID:<input type="text" name="ids" value="" />
+            <input type="submit" value="提交" />
+        </form>
+</body>
+</html>

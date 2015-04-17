@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="config">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <title>系统配置</title>
+    <link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.min.css" />
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 col-xs-18 text-center"><h1>系统配置</h1></div>
+    </div>
+    <br>
+    <form class="form-horizontal" role="form" method="post" ng-controller="fieldCtrl">
+        <div class="row">
+            <div class="col-md-offset-1 col-md-5 col-sm-6">
+                <div class="form-group" ng-repeat="field in oneFieldData">
+                    <label for={{field.name}} class="col-md-offset-2 col-md-3 control-label">{{field.remake}}</label>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" name="{{field.name}}" id="{{field.ame}}" placeholder={{field.remake}} required>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <div class="form-group" ng-repeat="field in twoFieldData">
+                    <label for={{field.name}} class="col-md-3 control-label">{{field.remake}}</label>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" name="{{field.name}}" id="{{field.ame}}" placeholder={{field.remake}} required>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <div class="form-group">
+            <div style="text-align: center">
+                <button type="submit" class="btn btn-primary">配置</button>
+                <button type="reset" class="btn btn-default">重置</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="/components/jquery/dist/jquery.min.js"></script>
+<script src="/components/angular/angular.min.js"></script>
+<script type="application/javascript">
+        angular.module('config',[])
+                .controller('fieldCtrl', ['$scope', function ($scope) {
+                    $scope.oneFieldData = [
+                        {
+                            name: "name",
+                            remake: "商家名称",
+                            type: 'text'
+                        },
+                        {
+                            name: "isMainShop",
+                            remake: "是否主店铺",
+                            type: 'radio'
+                        },
+                        {
+                            name: "describe",
+                            remake: "店铺描述",
+                            type: 'text'
+                        },
+                        {
+                            name: "city",
+                            remake: "所属城市",
+                            type: 'text'
+                        },
+                        {
+                            name: "startBusiness",
+                            remake: "开始营业时间",
+                            type: 'datetime'
+                        },
+
+                        {
+                            name: "picture",
+                            remake: "图片",
+                            type: 'file'
+                        },
+                        {
+                            name: "isInvoice",
+                            remake: "是否支持发票",
+                            type: 'radio'
+                        },
+                        {
+                            name: "businessPhone",
+                            remake: "业务电话",
+                            type: 'number'
+                        },
+                        {
+                            name: "reserveTime",
+                            remake: "预留时间",
+                            type: 'datetime'
+                        },
+                        {
+                            name: "startDelivery",
+                            remake: "外卖派送时间(开始)",
+                            type: 'datetime'
+                        },
+                        {
+                            name: "shipPrice",
+                            remake: "配送价格",
+                            type: 'datetime'
+                        },
+                        {
+                            name: "isAtOnceDelivery",
+                            remake: "是否支持马上派送",
+                            type: 'radio'
+                        },
+                        {
+                            name: "position",
+                            remake: "坐标点",
+                            type: 'text'
+                        },
+                        {
+                            name: "isTakeOut",
+                            remake: "是否支持外卖",
+                            type: 'radio'
+                        },
+                        {
+                            name: "isVoucher",
+                            remake: "是否支持代金券",
+                            type: 'radio'
+
+                        }
+                    ];
+                    $scope.twoFieldData = [
+                        {
+                            name: "address",
+                            remake: "店铺地址",
+                            type: 'text'
+                        },
+                        {
+                            name: "shopTypeId",
+                            remake: "店铺类型",
+                            type: 'radio'
+                        },
+                        {
+                            name: "province",
+                            remake: "所属省份",
+                            type: 'text'
+                        },
+                        {
+                            name: "area",
+                            remake: "所属行政区",
+                            type: 'text'
+                        },
+                        {
+                            name: "endBusiness",
+                            remake: "结束营业时间",
+                            type: 'datetime'
+                        },
+                        {
+                            name: "phone",
+                            remake: "联系电话",
+                            type: 'number'
+                        },
+                        {
+                            name: "sendPricesendPrice",
+                            remake: "起送价格",
+                            type: 'number'
+
+                        },
+                        {
+                            name: "isPayOnDelivery",
+                            remake: "是否支持货到付款",
+                            type: 'radio'
+                        },
+                        {
+                            name: "mainBusiness",
+                            remake: "主营业务",
+                            type: 'text'
+                        },
+                        {
+                            name: "endDelivery",
+                            remake: "外卖派送时间(结束)",
+                            type: 'datetime'
+                        },
+                        {
+                            name: "freePrice",
+                            remake: "免费费用",
+                            type: 'number'
+                        },
+                        {
+                            name: "shipTime",
+                            remake: "订购时间",
+                            type: 'datetime'
+
+                        },
+                        {
+                            name: "isReserve",
+                            remake: "是否支持预定",
+                            type: 'radio'
+
+                        },
+                        {
+                            name: "isGroupBuy",
+                            remake: "是否支持团购",
+                            type: 'radio'
+
+                        },
+                        {
+                            name: "isOrderDishes",
+                            remake: "是否支持点菜",
+                            type: 'radio'
+                        }
+                    ];
+
+                }])
+</script>
+</body>
+</html>

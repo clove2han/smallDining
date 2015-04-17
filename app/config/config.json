@@ -1,0 +1,13 @@
+{
+    "db":"mongodb://192.168.1.234/smallDining",
+    "account":"yjyp",
+    "password":"e10adc3949ba59abbe56e057f20f883e",
+    "cookieSecret":"smallDining",
+    "smallWallet":"http://192.168.1.192:3000",
+    "diningId":"",
+    "controllersDir":"/app/controllers/",
+    "modelsDir":"/app/models/",
+    "proxyDir":"/app/proxy/",
+    "imgName":"2015032417535930240962.jpg",
+    "isConnected": false
+}

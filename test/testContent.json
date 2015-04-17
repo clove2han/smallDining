@@ -1,0 +1,54 @@
+[
+    {
+        "remark": "测试路由 登录 /login/baselogin 成功",
+        "urlPath": "/login/otherLogin",
+        "sendConten" : {"account": "sn", "password": "sn"}
+    }
+    ,{
+        "remark": "测试路由 登录 /login/baselogin 登录失败",
+        "urlPath": "/login/cashierLogin",
+        "sendConten" : {"account": "sn", "password": "123456"}
+    }
+    ,{
+        "remark": "测试路由 添加会员等级 /memberLevel/add 成功",
+        "urlPath": "/memberLevel/add",
+        "sendConten" : {
+            "name": "123",
+            "minAmount": "1",
+            "maxAmount": "2",
+            "discounts": "3"
+        }
+    }
+    /*,{
+        "remark": "测试路由 查看会员等级 /memberLevel/query 成功",
+        "urlPath": "/memberLevel/query",
+        "sendConten" : {
+            "name": "123",
+            "_id": "544b5be4969f99641941c725"
+        }
+
+    ,{
+        "remark": "测试路由 修改会员等级 /memberLevel/update 成功",
+        "urlPath": "/memberLevel/update",
+        "sendConten" : {
+            "name": "123456",
+            "_id": "548fff65a9b6a55c2c0449b5"
+        }
+    }}*/
+    ,{
+        "remark": "测试路由 修改会员等级 /memberLevel/delete 成功",
+        "urlPath": "/memberLevel/delete",
+        "sendConten" : {
+            "_id": "548fff65a9b6a55c2c0449b5"
+        }
+    }
+    ,{
+        "remark": "订单查询分页 /restOrders/query 成功",
+        "urlPath": "/restOrders/query",
+        "sendConten" : {
+            "pageNumber": "1",
+            "orderState": "2"
+        }
+    }
+
+]

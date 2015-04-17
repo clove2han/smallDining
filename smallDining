@@ -1,0 +1,36 @@
+#!/bin/sh
+HOST="127.0.0.1"
+PORT=8000
+#chkconfig:2345 80 90
+
+APP_DIR="/opt/smallDining"
+DEAMON="$APP_DIR/bin/www"
+PID_DIR="$APP_DIR/pid"
+PID="$PID_DIR/app_$PORT.pid"
+LOG="$APP_DIR/logs"
+cd $APP_DIR
+case "$1" in
+    start)
+        forever start -l $LOG/forever_$PORT.log -o $LOG/forever_$PORT_out.log -e $LOG/forever_$PORT_err.log --pidFile $PID -a $DEAMON $HOST $PORT
+        ;;
+    stop)
+        forever stop --pidFile $PID $DEAMON
+        ;;
+    stopall)
+        forever stopall --pidFile $PID
+        ;;
+    restartall)
+        forever restartall --pidFile $PID
+        ;;
+    reload|restart)
+        forever restart -l $LOG/forever_$PORT.log -o $LOG/forever_$PORT_out.log -e $LOG/forever_$PORT_err.log --pidFile $PID -a $DEAMON $HOST $PORT
+        ;;
+    list)
+        forever list
+        ;;
+    *)
+        echo "Usage: /etc.init.d/smallDining {start|stop|restart|reload|stopall|restartall|list}"
+        exit 1
+        ;;
+esac
+exit 0

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <form method="post" action="/dishes/update">
+        <input type="hidden" name="_id" value="<%= result[0]._id%>">
+        name: <input type="text" name="name" value="<%= result[0].name%>">
+        abbr: <input type="text" name="abbr" value="<%= result[0].abbr%>">
+        typeId: <input type="text" name="typeId" value="<%= result[0].typeId%>">
+        activityType: <input type="text" name="activityType" value="<%= result[0].activityType%>">
+        price: <input type="text" name="price" value="<%= result[0].price%>">
+        intro: <input type="text" name="intro" value="<%= result[0].intro%>">
+        imgName: <input type="text" name="imgName" value="<%= result[0].imgName%>">
+        sort: <input type="text" name="sort" value="<%= result[0].sort%>">
+        surplus: <input type="text" name="surplus" value="<%= result[0].surplus%>">
+        state: <input type="text" name="state" value="<%= result[0].state%>">
+        saleType: <input type="text" name="saleType" value="<%= result[0].saleType%>">
+        name: <input type="text" name="name" value="<%= result[0].name%>">
+        <input type="submit" value="修改">
+    </form>
+</body>
+</html>
+
+<!--
+[ { _id: 545192eb69944a2c1d30f4a3,
+name: '小炒肉',
+abbr: 'XCR',
+typeId: 54504e5e38c54c400a805b7e,
+activityType: 'RECOMMEND',
+price: 12,
+intro: '小炒',
+imgName: '2014103092251idUUSG3M.jpg',
+createDate: Thu Oct 30 2014 09:22:51 GMT+0800 (中国标准时间),
+sort: 1,
+surplus: 0,
+salesVolume: 0,
+state: 2,
+saleType: 2,
+salePrice: 12,
+flavorId: [ { _id: 544754aaee5fb86c1420743f, name: 'aaa', remark: '
+', __v: 0 } ] } ]-->

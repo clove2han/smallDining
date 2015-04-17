@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form method="post">
+        <input type="text" name="id" value="<%=role._id%>">
+        name:<input type="text" name="name" value="<%=role.name%>"><br>
+        <input type="checkbox" value="543c8fe9597a277827192b3c" name="permission" <% if(role.permissionList[0] == '543c8fe9597a277827192b3c'){%>checked="checked" <%}%>>
+        <input type="checkbox" value="543ca00ff2d0dc48247e7ed0" name="permission" <% if(role.permissionList[1] == '543ca00ff2d0dc48247e7ed0'){%>checked="checked" <%}%>>
+        <input type="submit">
+    </form>
+</body>
+</html>

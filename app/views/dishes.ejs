@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>菜品测试页</title>
+</head>
+<body>
+    <h3>菜品测试页</h3>
+    <br>
+    检索：
+        <form method="post" action="/dishes/query">
+            ID:<input type="text" name="id" />
+            NAME:<input type="text" name="name" />
+            <input type="submit" value="搜索" />
+        </form>
+    <br>
+    新增：
+        <form method="post" action="/dishes/add" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td>菜品名称:</td>
+                <td><input type="text" name="name" /></td>
+            </tr>
+            <tr>
+                <td>名称缩写:</td>
+                <td><input type="text" name="abbr" /></td>
+            </tr>
+            <tr>
+                <td>菜品类型:</td>
+                <td>
+                    <select name="typeId">
+                        <option value="544dba2724d627f81297ff16">川菜</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>活动类型:</td>
+                <td>
+                    推荐菜：<input type="checkbox" name="activityType" value="RECOMMEND" />
+                    特价菜：<input type="checkbox" name="activityType" value="BARGAIN" />
+                    赠送菜：<input type="checkbox" name="activityType" value="PRESENT" />
+                </td>
+            </tr>
+            <tr>
+                <td>口味:</td>
+                <td>
+                    超级辣：<input type="checkbox" name="flavorId" value="543cf4d0f54a29a41e590bec" />
+                    错误口味：<input type="checkbox" name="flavorId" value="123" />
+                </td>
+            </tr>
+            <tr>
+                <td>菜品图片:</td>
+                <td><input type="file" name="imgName" /></td>
+            </tr>
+            <tr>
+                <td>单价:</td>
+                <td><input type="text" name="price" /></td>
+            </tr>
+            <tr>
+                <td>菜品简介:</td>
+                <td><input type="text" name="intro" /></td>
+            </tr>
+            <tr>
+                <td>特价:</td>
+                <td><input type="text" name="salePrice" /></td>
+            </tr>
+            <tr>
+                <td>销售状态:</td>
+                <td><input type="text" name="state" /></td>
+            </tr>
+            <tr>
+                <td>销量:</td>
+                <td><input type="text" name="salesVolume" /></td>
+            </tr>
+            <tr>
+                <td>可供数量:</td>
+                <td><input type="text" name="surplus" /></td>
+            </tr>
+            <tr>
+                <td>销售类型:</td>
+                <td><input type="text" name="saleType" /></td>
+            </tr>
+            <tr>
+                <td>备注:</td>
+                <td><input type="text" name="remark" /></td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><input type="submit" value="提交" /></td>
+            </tr>
+        </table>
+    </form>
+    <br>
+</body>
+</html>
